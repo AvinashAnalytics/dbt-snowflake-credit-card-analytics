@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_card_type
+    description: "Dimension table for card types"
+    columns:
+      - name: card_type
+        description: "Name of card type"
+      - name: card_type_id
+        description: "Hashed surrogate key"

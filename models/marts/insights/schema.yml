@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: top_5_cities
+    description: "Top 5 cities by credit card spend and their % contribution"
+  - name: gender_exp_type_pct
+    description: "Percent contribution of spends by females per expense type"
+  - name: monthly_spend_by_card
+    description: "Highest spend month and amount spent per card type"
+  - name: lowest_gold_city
+    description: "City with lowest % spend using Gold cards"
+  - name: city_expense_comparison
+    description: "City-wise highest and lowest expense types"
+  - name: cumulative_card_milestone
+    description: "Transaction row when each card type reaches 1 million cumulative spend"
+  - name: weekend_efficiency
+    description: "City with highest weekend spend-to-transaction ratio"
+  - name: fastest_city_500
+    description: "City that reached 500 transactions the fastest after first transaction"
+  - name: highest_mom_growth
+    description: "Card + expense type combo with highest MoM growth in Jan-2014"

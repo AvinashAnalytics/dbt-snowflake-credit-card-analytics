@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: dbt_raw_data
+    database: dbt_demo
+    schema: dbt_raw_data
+    tables:
+      - name: trns
+        description: "Raw transactions table from credit card logs"
+        columns:
+          - name: transaction_id
+            description: "Primary key"
+          - name: city
+            description: "City where transaction occurred"
+          - name: transaction_date
+          - name: card_type
+          - name: exp_type
+          - name: gender
+          - name: amount

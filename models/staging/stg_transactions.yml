@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: "Cleaned and standardized transaction records"
+    columns:
+      - name: transaction_id
+        tests: [not_null, unique]
+      - name: city_raw
+      - name: transaction_date
+        tests: [not_null]
+      - name: card_type
+      - name: exp_type
+      - name: gender
+      - name: amount
+        tests: [not_null]

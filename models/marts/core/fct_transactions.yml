@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fct_transactions
+    description: "Central fact table for credit card transactions"
+    columns:
+      - name: transaction_id
+        description: "Unique transaction ID"
+        tests: [not_null, unique]
+
+      - name: transaction_date
+        description: "Date of the transaction"
+        tests: [not_null]
+
+      - name: gender_id
+        description: "Foreign key to gender"
+        tests: [not_null]
+
+      - name: city_id
+        description: "Foreign key to city"
+        tests: [not_null]
+
+      - name: card_type_id
+        description: "Foreign key to card type"
+        tests: [not_null]
+
+      - name: exp_type
+        description: "Type of expense (Bills, Fuel, etc.)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Bills', 'Fuel', 'Travel', 'Shopping']
+
+      - name: amount
+        description: "Transaction amount"
+        tests: [not_null]
