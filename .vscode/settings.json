@@ -1,0 +1,40 @@
+{
+  // Path to the Python interpreter with dbt installed
+  "dbtPowerUser.dbtPythonPath": "D:\\anaconda3\\envs\\dbt-env\\python.exe",
+
+  // Subfolder inside the workspace where dbt_project.yml lives
+  "dbtPowerUser.dbtProjectSubfolder": "dbt-snowflake-credit-card-analytics",
+
+  // Optional: dbt Power User theme
+  "dbt.perspectiveTheme": "Vintage",
+
+  // SQLFluff config file (auto-detect if in project root)
+  "sqlfluff.config": "${workspaceFolder}/.sqlfluff",
+
+  // Run SQLFluff on save (optional, for real-time linting)
+  "sqlfluff.linter.run": "onSave",
+
+  // Helps VS Code parse Jinja tags properly in .sql files
+  "files.associations": {
+    "*.sql": "jinja-sql",
+    "**/target/**": ""
+  },
+
+  // Enable suggestions inside strings (like in Jinja blocks)
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // Hide dbt-generated folders from search
+  "search.exclude": {
+    "**/target": true,
+    "**/dbt_modules": true
+  },
+
+  // Hide dbt folders from file explorer too (optional)
+  "files.exclude": {
+    "**/target": true,
+    "**/dbt_modules": true
+  },
+  "dbt.enableNewLineagePanel": true
+}

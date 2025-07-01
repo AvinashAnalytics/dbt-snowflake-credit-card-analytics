@@ -10,7 +10,7 @@ SELECT
     t.amount
 FROM {{ ref('stg_transactions') }} t
 LEFT JOIN {{ ref('dim_date') }} d 
-    ON t.transaction_date_actual = d.date          -- true DATE join
+    ON t.transaction_date = d.date_display     -- true DATE join
 LEFT JOIN {{ ref('dim_gender') }} g 
     ON UPPER(t.gender) = UPPER(g.gender)
 LEFT JOIN {{ ref('dim_city') }} c 

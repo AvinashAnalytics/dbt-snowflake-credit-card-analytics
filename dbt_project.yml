@@ -1,10 +1,8 @@
-name: 'my_new_project'
+name: 'dbt_pro'
 version: '1.0.0'
-config-version: 2
 
-profile: 'default'
+profile: 'dbt_pro'
 
-# File paths
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
@@ -12,20 +10,17 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-# Where compiled files go
-target-path: "target"
 clean-targets:
   - "target"
-  - "dbt_packages"
 
-# Model configurations
+
 models:
-  my_new_project:
-    +materialized: view         # Default for all models in this project
+  dbt-snowflake-credit-card-analytics:
+    +generate_schema_name: generate_schema_name  # call your macro
 
     staging:
-      +materialized: view       # Keep staging models as views
+      +materialized: view
 
     marts:
-      core:
-        +materialized: table    # Tables for facts and dimensions
+     core:
+      +materialized: table
